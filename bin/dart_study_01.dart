@@ -1,12 +1,13 @@
 void main(List<String> arguments)
 {
-  int age = 20;
+  const int age = 20;
   printAge(age);
 
   String toHexadecimal = intToHexadecimal(age);
   printText('Now in Hexadecimal: 0x$toHexadecimal');
 
-  double height = 1.87;
+  final double height;
+  height = 1.87;
   printHeightInMeters(height);
 
   double weight = 74.80;
