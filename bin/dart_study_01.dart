@@ -13,6 +13,10 @@ void main(List<String> arguments)
   printWeightInKg(weight);
 
   printExponential();
+
+  List<String> list = createNameList();
+  print(list);
+  printOneElementAtTimeFromList(list);
 }
 
 void printText(String text)
@@ -49,4 +53,23 @@ void printExponential()
   double value = 21e5;
   String text = 'Exponential is: $value';
   printText(text);
+}
+
+List<String> createNameList()
+{
+  List<String> names = [];
+  names.add('Name1');
+  names.add('Name2');
+  names.add('Name3');
+  names.add('Name4');
+  names.add('Name5');
+  names.add('Name6');
+  return names;
+}
+
+void printOneElementAtTimeFromList(List<String> list)
+{
+  for(int i = 0; i < list.length; i++){
+    print(list[i]);
+  }
 }
