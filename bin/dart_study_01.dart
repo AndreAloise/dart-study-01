@@ -5,6 +5,12 @@ void main(List<String> arguments)
 
   String toHexadecimal = intToHexadecimal(age);
   printText('Now in Hexadecimal: 0x$toHexadecimal');
+
+  double height = 1.87;
+  printHeightInMeters(height);
+
+  double weight = 74.80;
+  printWeightInKg(weight);
 }
 
 void printText(String text)
@@ -22,4 +28,16 @@ String intToHexadecimal(int value)
 {
   String convertedValue = value.toRadixString(16);
   return convertedValue;
+}
+
+void printHeightInMeters(double height)
+{
+  String text = 'My height is: $height meters.';
+  printText(text);
+}
+
+void printWeightInKg(double weight)
+{
+  String text = 'My weight is: $weight kg.';
+  printText(text);
 }
