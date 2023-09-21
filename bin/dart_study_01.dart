@@ -11,6 +11,8 @@ void main(List<String> arguments)
 
   double weight = 74.80;
   printWeightInKg(weight);
+
+  printExponential();
 }
 
 void printText(String text)
@@ -39,5 +41,12 @@ void printHeightInMeters(double height)
 void printWeightInKg(double weight)
 {
   String text = 'My weight is: $weight kg.';
+  printText(text);
+}
+
+void printExponential()
+{
+  double value = 21e5;
+  String text = 'Exponential is: $value';
   printText(text);
 }
