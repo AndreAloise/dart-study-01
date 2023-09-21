@@ -17,6 +17,9 @@ void main(List<String> arguments)
   List<String> list = createNameList();
   print(list);
   printOneElementAtTimeFromList(list);
+
+  List<dynamic> dynamicList = createDynamicList();
+  print(dynamicList);
 }
 
 void printText(String text)
@@ -72,4 +75,14 @@ void printOneElementAtTimeFromList(List<String> list)
   for(int i = 0; i < list.length; i++){
     print(list[i]);
   }
+}
+
+List<dynamic> createDynamicList()
+{
+  List<dynamic> list = [];
+  list.add(20);
+  list.add(1.87);
+  list.add(75.80);
+  list.add('Name1');
+  return list;
 }
