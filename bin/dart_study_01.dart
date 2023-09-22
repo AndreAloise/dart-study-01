@@ -91,7 +91,7 @@ List<dynamic> createDynamicList()
 
 void checkIfIsMinor(int age)
 {
-  if(age > 18)
+  if(age >= 18)
   {
     printText('This person is an adult.');
   }
