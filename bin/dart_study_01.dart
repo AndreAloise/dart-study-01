@@ -2,6 +2,7 @@ void main(List<String> arguments)
 {
   const int age = 20;
   printAge(age);
+  checkIfIsMinor(age);
 
   String toHexadecimal = intToHexadecimal(age);
   printText('Now in Hexadecimal: 0x$toHexadecimal');
@@ -86,4 +87,15 @@ List<dynamic> createDynamicList()
   list.add(75.80);
   list.add('Name1');
   return list;
+}
+
+void checkIfIsMinor(int age)
+{
+  if(age > 18)
+  {
+    printText('This person is an adult.');
+  }
+  else{
+    printText('This person is a minor.');
+  }
 }
