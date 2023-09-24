@@ -1,5 +1,4 @@
-void main(List<String> arguments)
-{
+void main(List<String> arguments) {
   const int age = 20;
   printAge(age);
   checkIfIsMinor(age);
@@ -24,44 +23,37 @@ void main(List<String> arguments)
   print(dynamicList);
 }
 
-void printText(String text)
-{
+void printText(String text) {
   print(text);
 }
 
-void printAge(int age)
-{
+void printAge(int age) {
   String text = 'My age is: $age years.';
   printText(text);
 }
 
-String intToHexadecimal(int value)
-{
+String intToHexadecimal(int value) {
   String convertedValue = value.toRadixString(16);
   return convertedValue;
 }
 
-void printHeightInMeters(double height)
-{
+void printHeightInMeters(double height) {
   String text = 'My height is: $height meters.';
   printText(text);
 }
 
-void printWeightInKg(double weight)
-{
+void printWeightInKg(double weight) {
   String text = 'My weight is: $weight kg.';
   printText(text);
 }
 
-void printExponential()
-{
+void printExponential() {
   double value = 21e5;
   String text = 'Exponential is: $value';
   printText(text);
 }
 
-List<String> createNameList()
-{
+List<String> createNameList() {
   List<String> names = [];
   names.add('Name1');
   names.add('Name2');
@@ -72,15 +64,13 @@ List<String> createNameList()
   return names;
 }
 
-void printOneElementAtTimeFromList(List<String> list)
-{
-  for(int i = 0; i < list.length; i++){
+void printOneElementAtTimeFromList(List<String> list) {
+  for (int i = 0; i < list.length; i++) {
     print(list[i]);
   }
 }
 
-List<dynamic> createDynamicList()
-{
+List<dynamic> createDynamicList() {
   List<dynamic> list = [];
   list.add(20);
   list.add(1.87);
@@ -89,13 +79,10 @@ List<dynamic> createDynamicList()
   return list;
 }
 
-void checkIfIsMinor(int age)
-{
-  if(age >= 18)
-  {
+void checkIfIsMinor(int age) {
+  if (age >= 18) {
     printText('This person is an adult.');
-  }
-  else{
+  } else {
     printText('This person is a minor.');
   }
 }
