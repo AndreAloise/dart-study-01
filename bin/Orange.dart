@@ -16,4 +16,12 @@ class Orange {
   bool isRippedToConsumption(){
     return ((daysToBeRiped <= harvestDays) && (harvestDays < daysToBeRotten));
   }
+
+  @override
+  String toString(){
+    return 'The fruit $name has $weight kg and was harvested $harvestDays day ago.\n'
+        'As we can see, it has a predominant shade of $firstColor,'
+        'with some patches of $secondColor.\n'
+        'When you taste is, is has a $flavor flavor.';
+  }
 }
