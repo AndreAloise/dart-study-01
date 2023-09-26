@@ -1,3 +1,4 @@
+import 'fruits/apple.dart';
 import 'fruits/orange.dart';
 
 void main(List<String> arguments) {
@@ -26,6 +27,9 @@ void main(List<String> arguments) {
 
   Orange orange = createOrangeFruit();
   print(orange);
+
+  Apple apple = createAppleFruit();
+  print(apple);
 }
 
 void printText(String text) {
@@ -101,4 +105,15 @@ Orange createOrangeFruit(){
   orange.weight = 0.123;
   orange.flavor = 'Sweet with a slight acidity';
   return orange;
+}
+
+Apple createAppleFruit(){
+  Apple apple = Apple(8, 43);
+  apple.name = 'Apple';
+  apple.harvestDays = 68;
+  apple.firstColor = 'Red';
+  apple.secondColor = '';
+  apple.weight = 0.11;
+  apple.flavor = 'Sweet';
+  return apple;
 }
