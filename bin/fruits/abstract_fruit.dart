@@ -14,15 +14,23 @@ abstract class Fruit{
 
   @override
   String toString(){
-    String phraseWithMultipleColors = 'The fruit $name has $weight kg and was harvested $harvestDays day ago.\n'
-        'As we can see, it has a predominant shade of $firstColor,'
-        'with some patches of $secondColor.\n'
+    bool isGoodToConsume = isRippedToConsumption();
+
+    String textWithMultipleColors = 'The fruit $name has $weight kg and was harvested $harvestDays day(s) ago.\n'
+        'As we can see, originally it has a predominant shade of $firstColor,'
+        'with some patches of $secondColor.\n';
+
+    String textWithOneColor = 'The fruit $name has $weight kg and was harvested $harvestDays day(s) ago.\n'
+        'As we can see, originally it has the color $firstColor.\n'
         'When you taste is, is has a $flavor flavor.';
 
-    String phraseWithOneColor = 'The fruit $name has $weight kg and was harvested $harvestDays day ago.\n'
-        'As we can see, it has the color $firstColor.\n'
-        'When you taste is, is has a $flavor flavor.';
+    String flavorText = 'When you taste is, it has a $flavor flavor.';
+    String rottenText = 'You should not taste it because it is Rotten.';
 
-    return secondColor.isEmpty ? phraseWithMultipleColors : phraseWithOneColor;
+    String lastPhrase = isGoodToConsume ? flavorText : rottenText;
+    String phraseWithMultipleColors = textWithMultipleColors + lastPhrase;
+    String phraseWithOneColor = textWithOneColor + lastPhrase;
+
+    return secondColor.isNotEmpty ? phraseWithMultipleColors : phraseWithOneColor;
   }
 }
