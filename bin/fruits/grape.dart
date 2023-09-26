@@ -1,19 +1,9 @@
-class Grape {
-  String name = '';
-  double weight = 0.0;
-  String firstColor = '';
-  String secondColor = '';
-  String flavor = '';
-  int harvestDays = 0;
-  late final int daysToBeRiped;
-  late final int daysToBeRotten;
+import 'abstract_fruit.dart';
+
+class Grape extends Fruit {
 
   Grape(int daysTbRipped, int daysTbRotten){
     daysToBeRiped = daysTbRipped;
     daysToBeRotten = daysTbRotten;
-  }
-
-  bool isRippedToConsumption(){
-    return ((daysToBeRiped <= harvestDays) && (harvestDays < daysToBeRotten));
   }
 }
