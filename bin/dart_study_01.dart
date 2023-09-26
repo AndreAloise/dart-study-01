@@ -1,4 +1,4 @@
-import 'orange.dart';
+import 'fruits/orange.dart';
 
 void main(List<String> arguments) {
   const int age = 20;
