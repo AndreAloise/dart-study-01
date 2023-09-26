@@ -1,3 +1,5 @@
+import 'Orange.dart';
+
 void main(List<String> arguments) {
   const int age = 20;
   printAge(age);
@@ -21,6 +23,9 @@ void main(List<String> arguments) {
 
   List<dynamic> dynamicList = createDynamicList();
   print(dynamicList);
+
+  Orange orange = createOrangeFruit();
+  print(orange);
 }
 
 void printText(String text) {
@@ -85,4 +90,15 @@ void checkIfIsMinor(int age) {
   } else {
     printText('This person is a minor.');
   }
+}
+
+Orange createOrangeFruit(){
+  Orange orange = Orange(10, 50);
+  orange.name = 'Orange';
+  orange.harvestDays = 23;
+  orange.firstColor = 'Orange';
+  orange.secondColor = 'Yellow';
+  orange.weight = 0.123;
+  orange.flavor = 'Sweet with a slight acidity';
+  return orange;
 }
