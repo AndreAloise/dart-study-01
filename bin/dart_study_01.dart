@@ -1,4 +1,5 @@
 import 'fruits/apple.dart';
+import 'fruits/grape.dart';
 import 'fruits/orange.dart';
 
 void main(List<String> arguments) {
@@ -30,6 +31,9 @@ void main(List<String> arguments) {
 
   Apple apple = createAppleFruit();
   print(apple);
+
+  Grape grape = createGrapeFruit();
+  print(grape);
 }
 
 void printText(String text) {
@@ -116,4 +120,15 @@ Apple createAppleFruit(){
   apple.weight = 0.11;
   apple.flavor = 'Sweet';
   return apple;
+}
+
+Grape createGrapeFruit(){
+  Grape grape = Grape(10, 30);
+  grape.name = 'Apple';
+  grape.harvestDays = 12;
+  grape.firstColor = 'Violet';
+  grape.secondColor = '';
+  grape.weight = 0.07;
+  grape.flavor = 'Very sweet';
+  return grape;
 }
