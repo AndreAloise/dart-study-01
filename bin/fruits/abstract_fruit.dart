@@ -20,7 +20,7 @@ abstract class Fruit{
         'When you taste is, is has a $flavor flavor.';
 
     String phraseWithOneColor = 'The fruit $name has $weight kg and was harvested $harvestDays day ago.\n'
-        'As we can see, it has a(n) $firstColor color.\n'
+        'As we can see, it has the color $firstColor.\n'
         'When you taste is, is has a $flavor flavor.';
 
     return secondColor.isEmpty ? phraseWithMultipleColors : phraseWithOneColor;
