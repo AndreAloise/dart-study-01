@@ -1,4 +1,4 @@
-abstract class Fruit{
+class Fruit{
   late String name;
   late double weight;
   late String firstColor;
