@@ -1,8 +1,8 @@
-import 'foods/fruit_cake.dart';
+import 'foods/cakes/fruit_cake.dart';
 import 'foods/fruits/apple.dart';
 import 'foods/fruits/grape.dart';
 import 'foods/fruits/orange.dart';
-import 'foods/vegetable_cake.dart';
+import 'foods/cakes/vegetable_cake.dart';
 import 'foods/vegetables/carrot.dart';
 
 void main(List<String> arguments) {
