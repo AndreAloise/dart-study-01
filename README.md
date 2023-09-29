@@ -1,1 +1,1 @@
-A simple command-line application.
+Repositório dedicado a estudos básicos da libguagem Dart.
