@@ -6,115 +6,18 @@ import 'foods/vegetable_cake.dart';
 import 'foods/vegetables/carrot.dart';
 
 void main(List<String> arguments) {
-  const int age = 20;
-  printAge(age);
-  checkIfIsMinor(age);
+  getOrangeInfo();
+  getAppleInfo();
+  getGrapeInfo();
 
-  String toHexadecimal = intToHexadecimal(age);
-  printText('Now in Hexadecimal: 0x$toHexadecimal');
+  print('');
+  createFruitCake<Apple>();
 
-  final double height;
-  height = 1.87;
-  printHeightInMeters(height);
-
-  double weight = 74.80;
-  printWeightInKg(weight);
-
-  printExponential();
-
-  List<String> list = createNameList();
-  print(list);
-  printOneElementAtTimeFromList(list);
-
-  List<dynamic> dynamicList = createDynamicList();
-  print(dynamicList);
-
-  Orange orange = createOrangeFruit();
-  print(orange);
-
-  Apple apple = createAppleFruit();
-  print(apple);
-
-  Grape grape = createGrapeFruit();
-  print(grape);
-
-  FruitCake<Apple> appleCake = FruitCake<Apple>();
-  appleCake.makeBatter();
-  appleCake.bake();
-  appleCake.makeFilling();
-
-  VegetableCake<Carrot> carrotCake = VegetableCake<Carrot>('chocolate');
-  carrotCake.makeBatter();
-  carrotCake.bake();
-  carrotCake.makeFilling();
-  carrotCake.addingIcing();
+  print('');
+  createVegetableCake<Carrot>('chocolate');
 }
 
-void printText(String text) {
-  print(text);
-}
-
-void printAge(int age) {
-  String text = 'My age is: $age years.';
-  printText(text);
-}
-
-String intToHexadecimal(int value) {
-  String convertedValue = value.toRadixString(16);
-  return convertedValue;
-}
-
-void printHeightInMeters(double height) {
-  String text = 'My height is: $height meters.';
-  printText(text);
-}
-
-void printWeightInKg(double weight) {
-  String text = 'My weight is: $weight kg.';
-  printText(text);
-}
-
-void printExponential() {
-  double value = 21e5;
-  String text = 'Exponential is: $value';
-  printText(text);
-}
-
-List<String> createNameList() {
-  List<String> names = [];
-  names.add('Name1');
-  names.add('Name2');
-  names.add('Name3');
-  names.add('Name4');
-  names.add('Name5');
-  names.add('Name6');
-  return names;
-}
-
-void printOneElementAtTimeFromList(List<String> list) {
-  for (int i = 0; i < list.length; i++) {
-    print(list[i]);
-  }
-}
-
-List<dynamic> createDynamicList() {
-  List<dynamic> list = [];
-  list.add(20);
-  list.add(1.87);
-  list.add(75.80);
-  list.add('Name1');
-  return list;
-}
-
-void checkIfIsMinor(int age) {
-  if (age >= 18) {
-    printText('This person is an adult.');
-  } else {
-    printText('This person is a minor.');
-  }
-}
-
-Orange createOrangeFruit(){
+Orange createOrangeFruit() {
   Orange orange = Orange(10, 50);
   orange.name = 'Orange';
   orange.harvestDays = 23;
@@ -125,7 +28,7 @@ Orange createOrangeFruit(){
   return orange;
 }
 
-Apple createAppleFruit(){
+Apple createAppleFruit() {
   Apple apple = Apple(8, 43);
   apple.name = 'Apple';
   apple.harvestDays = 68;
@@ -136,7 +39,7 @@ Apple createAppleFruit(){
   return apple;
 }
 
-Grape createGrapeFruit(){
+Grape createGrapeFruit() {
   Grape grape = Grape(10, 30);
   grape.name = 'Grape';
   grape.harvestDays = 12;
@@ -145,4 +48,34 @@ Grape createGrapeFruit(){
   grape.weight = 0.07;
   grape.flavor = 'Very sweet';
   return grape;
+}
+
+void getAppleInfo() {
+  Apple apple = createAppleFruit();
+  print(apple);
+}
+
+void getOrangeInfo() {
+  Orange orange = createOrangeFruit();
+  print(orange);
+}
+
+void getGrapeInfo() {
+  Grape grape = createGrapeFruit();
+  print(grape);
+}
+
+void createFruitCake<F>() {
+  FruitCake<F> fruitCake = FruitCake<F>();
+  fruitCake.makeBatter();
+  fruitCake.bake();
+  fruitCake.makeFilling();
+}
+
+void createVegetableCake<V>(String icing) {
+  VegetableCake<V> vegetableCake = VegetableCake<V>(icing);
+  vegetableCake.makeBatter();
+  vegetableCake.bake();
+  vegetableCake.makeFilling();
+  vegetableCake.addingIcing();
 }
