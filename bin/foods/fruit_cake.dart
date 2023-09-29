@@ -1,6 +1,6 @@
 import 'cake.dart';
 
-class FruitCake<M> implements Cake{
+class FruitCake<F> implements Cake{
   @override
   void bake() {
     print('Baking the cake in the oven.');
@@ -8,11 +8,11 @@ class FruitCake<M> implements Cake{
 
   @override
   void makeBatter() {
-    print('Preparing the $M cake dough.');
+    print('Preparing the $F cake dough.');
   }
 
   @override
   void makeFilling() {
-    print('Filling the cake with $M cream.');
+    print('Filling the cake with $F cream.');
   }
 }
