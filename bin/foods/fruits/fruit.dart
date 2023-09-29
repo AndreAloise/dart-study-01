@@ -1,12 +1,8 @@
-class Fruit{
-  late String name;
-  late double weight;
-  late String firstColor;
-  late String secondColor;
-  late String flavor;
+import '../food.dart';
+
+class Fruit extends Food{
   late int harvestDays;
   late final int daysToBeRiped;
-  late final int daysToBeRotten;
 
   bool isRippedToConsumption(){
     return ((daysToBeRiped <= harvestDays) && (harvestDays < daysToBeRotten));
