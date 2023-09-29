@@ -1,6 +1,6 @@
-import 'fruits/apple.dart';
-import 'fruits/grape.dart';
-import 'fruits/orange.dart';
+import 'foods/fruits/apple.dart';
+import 'foods/fruits/grape.dart';
+import 'foods/fruits/orange.dart';
 
 void main(List<String> arguments) {
   const int age = 20;
