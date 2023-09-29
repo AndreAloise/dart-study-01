@@ -6,4 +6,5 @@ class Vegetable{
   late String flavor;
   late int harvestDays;
   late final int daysToBeRotten;
+  late bool isCookingNeeded;
 }
