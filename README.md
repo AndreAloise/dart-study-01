@@ -1,1 +1,1 @@
-Repositório dedicado a estudos básicos da libguagem Dart.
+Repositório dedicado a estudos básicos da linguagem Dart.
