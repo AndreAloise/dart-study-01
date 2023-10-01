@@ -18,7 +18,7 @@ void main(List<String> arguments) {
 }
 
 Orange createOrangeFruit() {
-  Orange orange = Orange(10, 50);
+  Orange orange = Orange(10, 50, 1.15);
   orange.name = 'Orange';
   orange.harvestDays = 23;
   orange.firstColor = 'Orange';
@@ -29,7 +29,7 @@ Orange createOrangeFruit() {
 }
 
 Apple createAppleFruit() {
-  Apple apple = Apple(8, 43);
+  Apple apple = Apple(8, 43, 1);
   apple.name = 'Apple';
   apple.harvestDays = 68;
   apple.firstColor = 'Red';
@@ -40,7 +40,7 @@ Apple createAppleFruit() {
 }
 
 Grape createGrapeFruit() {
-  Grape grape = Grape(10, 30);
+  Grape grape = Grape(10, 30, 0.58);
   grape.name = 'Grape';
   grape.harvestDays = 12;
   grape.firstColor = 'Violet';

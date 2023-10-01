@@ -5,4 +5,5 @@ class Food{
   late String secondColor;
   late String flavor;
   late final int daysToBeRotten;
+  late double price;
 }
