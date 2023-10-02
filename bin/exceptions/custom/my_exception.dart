@@ -1,8 +1,16 @@
 class MyException implements Exception{
-  final String message;
+  String? message;
+  String? _customMessage;
+  late String lateMessage;
 
-  const MyException([this.message = ""]);
+  MyException([this.message = ""]);
+
+  MyException.customMessage(String? msg){
+    _customMessage = msg;
+  }
+
+  MyException.lateMessage([this.lateMessage = ""]);
 
   @override
-  String toString() => "MyException: $message";
+  String toString() => "MyException: $_customMessage";
 }
