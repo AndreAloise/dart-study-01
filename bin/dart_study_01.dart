@@ -1,3 +1,4 @@
+import 'exceptions/example/throw_my_exception.dart';
 import 'foods/cakes/fruit_cake.dart';
 import 'foods/fruits/apple.dart';
 import 'foods/fruits/grape.dart';
@@ -15,6 +16,10 @@ void main(List<String> arguments) {
 
   print('');
   createVegetableCake<Carrot>('chocolate');
+
+  createExceptionExample('exception message 01');
+  createExceptionExampleWithInstantiation('exception message 02');
+  createExceptionExampleWithLateInitialization('exception message 03');
 }
 
 Orange createOrangeFruit() {
@@ -78,4 +83,19 @@ void createVegetableCake<V>(String icing) {
   vegetableCake.bake();
   vegetableCake.makeFilling();
   vegetableCake.addingIcing();
+}
+
+void createExceptionExample(String exceptionMessage){
+  print('');
+  ThrowMyException.throwException(exceptionMessage);
+}
+
+void createExceptionExampleWithInstantiation(String exceptionMessage){
+  print('');
+  ThrowMyException.throwExceptionWithInstantiation(exceptionMessage);
+}
+
+void createExceptionExampleWithLateInitialization(String exceptionMessage){
+  print('');
+  ThrowMyException.throwExceptionWithLateInitialization(exceptionMessage);
 }
